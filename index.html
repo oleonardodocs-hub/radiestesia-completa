@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#0c1730"/>
+  <meta name="description" content="Radiestesia Completa: grafici interattivi, istruzioni concrete e diario di esercitazione."/>
+  <link rel="icon" type="image/png" href="assets/icon-192.png"/>
+  <link rel="apple-touch-icon" href="assets/icon-192.png"/>
+  <link rel="manifest" href="manifest.webmanifest"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Radiestesia Completa — Biblioteca Pratica</title>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <img src="assets/icon-192.png" width="54" height="54" alt="Emblema Radiestesia Completa"/>
+      <div><strong>RADIESTESIA</strong><span>COMPLETA</span></div>
+    </div>
+    <div class="nav-title">LA TUA AREA DI STUDIO</div>
+    <nav id="desktop-nav" aria-label="Navigazione principale">
+      <button data-view="home" class="nav-link active"><span class="nav-icon">⌂</span> Panoramica</button>
+      <button data-view="library" class="nav-link"><span class="nav-icon">◎</span> Biblioteca grafici</button>
+      <button data-view="guide" class="nav-link"><span class="nav-icon">☷</span> Metodo passo passo</button>
+      <button data-view="journal" class="nav-link"><span class="nav-icon">▤</span> Diario di pratica</button>
+      <button data-view="favorites" class="nav-link"><span class="nav-icon">♡</span> Preferiti</button>
+    </nav>
+    <div class="sidebar-tip"><div class="tip-symbol">✦</div><strong>Un metodo, non improvvisazione</strong><p>Domande chiare, osservazioni registrate e verifiche indipendenti.</p></div>
+    <div class="side-foot">Edizione iniziale · grafici didattici originali</div>
+  </aside>
+  <div class="main-area">
+    <header class="topbar"><span class="eyebrow">BIBLIOTECA DIGITALE · IN ITALIANO</span><div class="top-actions"><span class="online-dot"></span> Consultazione libera <button class="help-link" type="button" id="help-button">Come funziona?</button></div></header>
+    <main id="main" tabindex="-1"></main>
+    <footer class="footer"><span>© Radiestesia Completa · Materiale didattico originale</span><span>La radiestesia non è un metodo diagnostico scientificamente convalidato.</span></footer>
+  </div>
+</div>
+<nav class="mobile-nav" aria-label="Navigazione mobile">
+  <button data-view="home" class="active"><span>⌂</span><small>Inizio</small></button>
+  <button data-view="library"><span>◎</span><small>Grafici</small></button>
+  <button data-view="guide"><span>☷</span><small>Guida</small></button>
+  <button data-view="journal"><span>▤</span><small>Diario</small></button>
+  <button data-view="favorites"><span>♡</span><small>Preferiti</small></button>
+</nav>
+<dialog id="chart-modal" class="chart-modal" aria-label="Dettaglio del grafico"><div id="modal-content"></div></dialog>
+<dialog id="simple-modal" class="simple-modal" aria-label="Informazioni"><div id="simple-modal-content"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
