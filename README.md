@@ -1,40 +1,47 @@
-# Radiestesia Completa — 121 Grafici Radiestesici
+# Radiestesia Completa — 121 Grafici Radiestesici · v2.0
 
-Aplicativo **em italiano**, desenvolvido para funcionar sem login e sem banco de dados em uma hospedagem de arquivos estáticos, como **GitHub Pages**.
+Aplicativo estático em italiano para GitHub Pages, **sem login**, com biblioteca de 121 esquemas didáticos originais (não cópias de gráficos históricos). O conteúdo radiestésico é simbólico e **não comprova efeitos físicos, diagnósticos ou previsões**.
 
-## Conteúdo da versão
+## Novidades desta versão
 
-- 121 gráficos originais divididos em 10 categorias, cada um com desenho SVG exclusivo, objetivo, atividade específica e orientação de uso.
-- Download de cada gráfico como PNG 1920 × 2130 px e opção de imprimir / salvar em PDF pelo navegador.
-- Busca por título, tema e finalidade, filtros por categoria e ordenação.
-- Favoritos e gráficos estudados.
-- Diário de prática com exportação JSON ou CSV.
-- 7 aulas de método radiestésico e uso consciente.
-- Layout responsivo, manifest PWA e cache para uso posterior sem conexão (depois de carregar online).
+- 121 desenhos SVG gerados em composições individuais a partir de 10 famílias temáticas, com etiquetas específicas. Download PNG em alta resolução ou impressão/PDF.
+- 121 fichas específicas (`protocols.js`) com caso de uso individual, preparação, materiais, quatro etapas práticas, leitura, verificação e cuidados.
+- Percurso guiado de 12 etapas com exercícios e registro de conclusão; 7 leituras da edição inicial preservadas.
+- Backup de **favoritos + gráficos estudados + diário + percurso**, com exportação/importação JSON sem serviço externo.
+- Pesquisa, categorias, favoritos e diário (CSV / JSON) preservados.
+- Cache PWA atualizado v4, priorizando rede para receber versões novas e mantendo fallback offline.
+- Interface responsiva; conteúdo inteiramente em italiano.
 
-**Nota editorial:** os desenhos são *esquemas simbólicos originais para estudo*. Não são reproduções de 121 gráficos históricos de terceiros, nem instrumentos cientificamente comprovados de diagnóstico ou de tratamento. Revise a copy de vendas para refletir essa distinção.
+## Atualizar o GitHub Pages sem perder o link
 
-## Publicação no GitHub Pages
+1. Abra https://github.com/oleonardodocs-hub/radiestesia-completa
+2. Na aba **Code**, clique em **Add file → Upload files**.
+3. Arraste **todos os arquivos desta pasta extraída**, inclusive `protocols.js` e a pasta `assets` (não o ZIP nem a pasta externa).
+4. Confirme que `index.html`, `app.js`, `data.js`, `protocols.js`, `style.css`, `sw.js`, `manifest.webmanifest` ficam na raiz.
+5. Confirme a substituição dos arquivos de mesmo nome e clique em **Commit changes**.
+6. Aguarde a atualização do GitHub Pages e recarregue com `Ctrl+Shift+R` (Windows) / `Cmd+Shift+R` (Mac) se necessário.
 
-1. Crie um repositório novo no GitHub, por exemplo `radiestesia-completa`.
-2. Envie **o conteúdo desta pasta** para a raiz do repositório: `index.html`, `app.js`, `data.js`, `style.css`, `sw.js`, `manifest.webmanifest` e `assets/`.
-3. Em **Settings → Pages → Build and deployment**, selecione **Deploy from a branch**; branch `main`, pasta `/(root)`. Salve.
-4. Aguarde o GitHub mostrar a URL pública no painel Pages. Ela terá o formato `https://SEU-USUARIO.github.io/radiestesia-completa/`.
-5. Insira a URL real na área de membros do produto.
+Seu endereço público continua: https://oleonardodocs-hub.github.io/radiestesia-completa/
 
-> O GitHub é um local para guardar os arquivos, e o GitHub Pages é o serviço que exibe o app. O link publicado é **público**: colocar o endereço apenas na área de membros não restringe compartilhamento por terceiros.
+**Não exclua o repositório ou altere o nome dele:** isso poderia mudar o link. O app continua público; o link na área de membros não garante controle de acesso.
 
-## Testar localmente
+## Estrutura de arquivos
 
-Abra um terminal na pasta e execute `python3 -m http.server 8080` para acessar `http://localhost:8080`. O acesso por `file://` pode afetar recursos como o cache offline.
+- `index.html`: marcação e navegação.
+- `style.css`: visual e responsividade.
+- `app.js`: interface, desenhos SVG, exportação de PNG, curso, diário e backup.
+- `data.js`: nomes, categorias, perguntas e exercícios individuais.
+- `protocols.js`: 121 protocolos estendidos e 12 módulos de aprendizagem.
+- `sw.js`: cache offline.
+- `manifest.webmanifest`: informações do app instalável.
+- `assets/`: logos e ícones.
 
-## Onde editar o conteúdo
+## Privacidade e continuidade de dados
 
-- `data.js` → nomes, objetivos, atividades, termos de cada gráfico e lições.
-- `style.css` → cores e aparência.
-- `assets/` → logotipo e ícones.
-- `app.js` → interface, criação de gráficos SVG e lógica.
+A versão mantém a **mesma chave de armazenamento local** (`rc121-v2:`), preservando normalmente favoritos e diário já registrados no mesmo dispositivo/navegador. O curso e backups são funcionalidades novas. O backup JSON **não criptografa** os dados; guarde-o com segurança.
 
-## Dados e privacidade
+Não há backend, login, pagamento integrado, sincronização de dados entre aparelhos ou mecanismo de proteção contra compartilhamento do link. Importar backup permite unificar dados entre dispositivos, manualmente.
 
-Diário, progresso e favoritos são armazenados apenas no **localStorage do navegador** do cliente. Nenhum dado é enviado a servidores. A exclusão dos dados do navegador apaga registros não exportados. Use a função exportar para fazer backups. O progresso não sincroniza entre dispositivos.
+## Limites editoriais
+
+Os 121 esquemas são ilustrações e rotinas **originais, organizadas por temas**, não uma coleção de 121 radiônicos clássicos historicamente documentados. A oferta comercial deve deixar explícita essa distinção. A radiestesia não tem validação científica para diagnóstico ou tratamento e não substitui profissionais qualificados, normas de segurança, avaliação de alimentos, medicina ou decisões financeiras.

@@ -2098,7 +2098,7 @@ window.RC_DATA = [
       "FERMATI",
       "ASCOLTA",
       "RIFLETTI",
-      "ANNOTa"
+      "ANNOTA"
     ],
     "level": "Pratica guidata",
     "time": "7 min",
